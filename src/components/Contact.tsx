@@ -27,12 +27,12 @@ export default function Contact() {
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold leading-tight mb-6">
-            Let&apos;s build something meaningful.
+            Mari membangun sesuatu yang bermakna.
           </h2>
           <div className="w-20 h-1 bg-accent mb-6"></div>
 
           <p className="text-muted text-lg mb-12">
-            Have an idea, a project, or just want to connect? Feel free to reach out.
+            Punya ide, proyek, atau sekadar ingin terhubung? Jangan ragu untuk menghubungi saya.
           </p>
 
           <div className="flex items-center gap-4 mb-8">
@@ -64,7 +64,7 @@ export default function Contact() {
           </div>
 
           <h3 className="text-3xl font-bold mb-2">Tell me about your idea.</h3>
-          <p className="text-sm text-muted mb-8">Fill in the details below and I&apos;ll get back to you.</p>
+          <p className="text-sm text-muted mb-8">Isi detail di bawah ini dan saya akan menghubungi Anda kembali.</p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-2 gap-4">

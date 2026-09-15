@@ -31,17 +31,17 @@ export default function About() {
           <h2 className="text-5xl font-extrabold mb-6">Hello!</h2>
           <p className="text-lg mb-4">
             <span className="text-accent font-semibold">
-              Hi, my name is ALIF MAS SASTRO NUGROHO. I care about building clear, useful, and refined digital products.
+              Hai, Nama saya ALIF MAS SASTRO NUGROHO. Saya peduli dalam membangun produk digital yang jelas, bermanfaat, dan matang.
             </span>
           </p>
           <p className="text-muted leading-relaxed mb-4">
-            I am interested in the space where thoughtful design and practical engineering meet. I like turning an early idea into a clear experience that feels useful, calm, and intentional.
+            Saya tertarik pada titik temu antara desain yang penuh pertimbangan dan rekayasa praktis. Saya senang mengubah gagasan awal menjadi pengalaman yang jelas, bermanfaat, tenang, dan terarah.
           </p>
           <p className="text-muted leading-relaxed mb-4">
-            My approach is hands-on: understand the problem, shape the structure, build carefully, and keep improving the details that make a product easier to use. I value readable work, strong collaboration, and interfaces that communicate without unnecessary noise.
+            Pendekatan saya bersifat langsung: memahami masalah, menyusun struktur, membangun dengan cermat, dan terus menyempurnakan detail yang membuat produk lebih mudah digunakan. Saya menghargai pekerjaan yang mudah dipahami, kolaborasi yang kuat, serta antarmuka yang berkomunikasi tanpa kerumitan yang tidak perlu.
           </p>
           <p className="text-muted leading-relaxed">
-            Outside the code itself, I enjoy the visual side of digital work: pacing, composition, motion, and the small interactions that give a project its character.
+            Di luar kode itu sendiri, saya menikmati sisi visual dari pekerjaan digital: ritme, komposisi, gerakan, dan interaksi kecil yang memberikan karakter pada sebuah proyek.
           </p>
         </div>
       </div>

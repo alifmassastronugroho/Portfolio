@@ -12,9 +12,9 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {}
         <div>
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-            Hi, I&apos;m ALIF MAS SASTRO NUGROHO,
-            <br />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+            <span className="block">Hi, I&apos;m</span>
+            <span className="block break-words">ALIF MAS SASTRO NUGROHO,</span>
             <span className="inline-block min-w-[300px]">
               {typedText}
               <span className="typing-cursor"></span>
@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg text-muted mb-8 max-w-md">
-            I build considered digital experiences with a clean, modern point of view.
+            Saya membangun pengalaman digital yang matang dengan sudut pandang yang bersih dan modern.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">

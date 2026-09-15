@@ -52,7 +52,7 @@ export default function Skills() {
           </span>
           <h2 className="text-5xl font-extrabold mb-4">MY SKILLSET</h2>
           <p className="text-muted max-w-2xl mx-auto">
-            A comprehensive overview of my programming languages, frameworks, databases, and engineering concepts.
+            Gambaran menyeluruh tentang bahasa pemrograman, framework, basis data, dan konsep rekayasa yang saya kuasai.
           </p>
         </div>
 

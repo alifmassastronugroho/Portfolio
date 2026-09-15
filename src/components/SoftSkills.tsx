@@ -10,42 +10,42 @@ const softSkills = [
   {
     title: "LEADERSHIP",
     icon: Sparkles,
-    desc: "Guiding teams, managing tasks, and driving project completion with shared vision.",
+    desc: "Mengarahkan tim, mengelola tugas, dan mendorong penyelesaian proyek dengan visi bersama.",
   },
   {
     title: "PUBLIC SPEAKING",
     icon: MessageSquare,
-    desc: "Confident stage presence, anchoring summits, and delivering articulate technical ideas.",
+    desc: "Tampil percaya diri di panggung, memandu berbagai acara, dan menyampaikan ide teknis dengan jelas.",
   },
   {
     title: "TEAM COLLABORATION",
     icon: Users,
-    desc: "Collaborating across fields, building racing carts, and engineering code in sync.",
+    desc: "Berkolaborasi lintas bidang, membuat kereta balap, dan mengembangkan kode secara selaras.",
   },
   {
     title: "COMMUNICATION",
     icon: MessageCircle,
-    desc: "Clear, concise, and structured interactions in both business and technical contexts.",
+    desc: "Interaksi yang jelas, ringkas, dan terstruktur dalam konteks bisnis maupun teknis.",
   },
   {
     title: "PROBLEM SOLVING",
     icon: Lightbulb,
-    desc: "Breaking down complex engineering tasks into clean, logical, and modular pieces.",
+    desc: "Memecah tugas rekayasa yang kompleks menjadi bagian-bagian yang rapi, logis, dan modular.",
   },
   {
     title: "ADAPTABILITY",
     icon: RefreshCw,
-    desc: "Quick to pick up new frameworks like FastAPI, Spring Boot, or automation tools like n8n.",
+    desc: "Cepat mempelajari framework baru seperti FastAPI, Spring Boot, atau alat otomasi seperti n8n.",
   },
   {
     title: "CREATIVITY",
     icon: LightbulbIcon,
-    desc: "Blending cinematic aesthetics with software structure to build premium experiences.",
+    desc: "Memadukan estetika sinematik dengan struktur perangkat lunak untuk membangun pengalaman premium.",
   },
   {
     title: "TIME MANAGEMENT",
     icon: Clock,
-    desc: "Balancing B.Tech studies, event hosting, and developing robust software platforms.",
+    desc: "Menyeimbangkan studi B.Tech, menjadi pembawa acara, dan mengembangkan platform perangkat lunak yang tangguh.",
   },
 ];
 

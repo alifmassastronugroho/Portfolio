@@ -79,7 +79,7 @@ export default function Journey() {
           </span>
           <h2 className="text-5xl font-extrabold mb-4">Beyond Code</h2>
           <p className="text-muted max-w-2xl mx-auto">
-            A look at the things I build, explore, and keep learning beyond the code itself.
+            Sekilas tentang hal-hal yang saya bangun, eksplorasi, dan terus pelajari di luar kode itu sendiri.
           </p>
         </div>
 
