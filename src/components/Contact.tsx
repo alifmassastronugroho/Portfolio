@@ -52,7 +52,7 @@ export default function Contact() {
           </div>
 
           <p className="text-sm text-muted flex items-center gap-2">
-            <Mail size={14} /> aminecodes1@gmail.com
+            <Mail size={14} /> alifmassastronugroho@gmail.com
           </p>
         </div>
 
