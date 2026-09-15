@@ -38,7 +38,7 @@ export default function Experience() {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-extrabold mb-4">WORK EXPERIENCE</h2>
           <p className="text-muted max-w-2xl mx-auto">
-            Hands-on experience through personal projects, freelance development, internships, and continuous creative practice.
+            Pengalaman langsung melalui proyek pribadi, pengembangan freelance, magang, dan latihan kreatif yang berkelanjutan.
           </p>
         </div>
 

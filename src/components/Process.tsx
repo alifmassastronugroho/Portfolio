@@ -8,28 +8,28 @@ const stages = [
     num: "01",
     title: "Understand",
     icon: Lightbulb,
-    desc: "I start by understanding the idea, the problem, and what the final experience should achieve. I break the idea into clear goals before writing code.",
+    desc: "Saya memulai dengan memahami ide, masalah, dan hasil yang ingin dicapai oleh pengalaman akhir. Saya memecah ide tersebut menjadi tujuan yang jelas sebelum menulis kode.",
     tags: ["IDEA", "GOALS", "REQUIREMENTS"],
   },
   {
     num: "02",
     title: "Design",
     icon: Layout,
-    desc: "I shape the experience before building it — thinking about layout, visual hierarchy, interactions, and responsive behavior. I use tools like Figma to explore and refine the interface.",
+    desc: "Saya membentuk pengalaman sebelum membangunnya dengan memikirkan tata letak, hierarki visual, interaksi, dan perilaku responsif. Saya menggunakan alat seperti Figma untuk mengeksplorasi dan menyempurnakan antarmuka.",
     tags: ["UI/UX", "FIGMA", "LAYOUT", "INTERACTION"],
   },
   {
     num: "03",
     title: "Build",
     icon: Code2,
-    desc: "I turn the design into a real product using modern web technologies. I focus on clean structure, responsive interfaces, reusable components, and solving problems along the way.",
+    desc: "Saya mengubah desain menjadi produk nyata menggunakan teknologi web modern. Saya berfokus pada struktur yang rapi, antarmuka responsif, komponen yang dapat digunakan kembali, dan penyelesaian masalah selama prosesnya.",
     tags: ["FRONTEND", "BACKEND", "COMPONENTS", "CODE"],
   },
   {
     num: "04",
     title: "Refine",
     icon: Sparkles,
-    desc: "After the first version works, I test, improve, polish the details, and make the experience feel smoother. I care about performance, responsiveness, animations, and the small details that make a product feel complete.",
+    desc: "Setelah versi pertama berfungsi, saya menguji, meningkatkan, dan menyempurnakan detail agar pengalaman terasa lebih lancar. Saya memperhatikan performa, responsivitas, animasi, dan detail kecil yang membuat produk terasa lengkap.",
     tags: ["TESTING", "PERFORMANCE", "ANIMATION", "POLISH"],
   },
 ];
@@ -46,7 +46,7 @@ export default function Process() {
           </span>
           <h2 className="text-5xl font-extrabold mb-4">How I Build</h2>
           <p className="text-muted max-w-2xl">
-            From a simple idea to a polished digital experience — I combine development, design, and creative thinking at every stage.
+            Dari ide sederhana hingga pengalaman digital yang matang, saya memadukan pengembangan, desain, dan pemikiran kreatif di setiap tahap.
           </p>
         </div>
 
