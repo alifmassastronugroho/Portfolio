@@ -124,4 +124,5 @@ Cara paling singkat adalah lewat Vercel. Import repo ini, biarkan pengaturan def
 
 ## Kontak
 
-aminecodes1@gmail.com
+alifmassastronugroho@gmail.com
+
