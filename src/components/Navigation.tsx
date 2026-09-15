@@ -36,7 +36,7 @@ export default function Navigation() {
           onClick={() => scrollTo("home")}
           className="text-xl font-bold tracking-tight"
         >
-          AMINE<span className="text-accent">.</span>
+          ALIF MAS SASTRO NUGROHO<span className="text-accent">.</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

@@ -30,7 +30,7 @@ export default function Preloader() {
         PORTFOLIO / 2026
       </div>
       <div className="absolute top-8 right-8 text-xs tracking-[3px] text-muted font-mono">
-        AMINE_CODES
+        ALIF MAS SASTRO NUGROHO_CODES
       </div>
       <div className="absolute left-8 top-1/2 -translate-y-1/2 -rotate-90 text-xs tracking-[3px] text-muted font-mono origin-left">
         CREATIVE / DISCREETLY / DIGITAL
@@ -50,7 +50,7 @@ export default function Preloader() {
         </div>
 
         <h1 className="text-[120px] font-extrabold text-primary tracking-tight animate-blur-in">
-          AMINE<span className="text-accent">.</span>
+          ALIF MAS SASTRO NUGROHO<span className="text-accent">.</span>
         </h1>
 
         <div className="flex items-center gap-2 justify-center mt-4 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>

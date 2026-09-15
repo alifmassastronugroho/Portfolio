@@ -31,7 +31,7 @@ export default function About() {
           <h2 className="text-5xl font-extrabold mb-6">Hello!</h2>
           <p className="text-lg mb-4">
             <span className="text-accent font-semibold">
-              Hi, my name is AMINE. I care about building clear, useful, and refined digital products.
+              Hi, my name is ALIF MAS SASTRO NUGROHO. I care about building clear, useful, and refined digital products.
             </span>
           </p>
           <p className="text-muted leading-relaxed mb-4">
