@@ -31,7 +31,7 @@ export default function Navigation() {
         scrolled ? "bg-white/85 backdrop-blur-md shadow-sm" : "bg-bg/90 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-3 sm:py-4 flex items-center justify-between gap-4">
         <button
           onClick={() => scrollTo("home")}
           className="text-sm sm:text-base lg:text-xl font-bold tracking-tight whitespace-nowrap"

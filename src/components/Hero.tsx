@@ -8,11 +8,11 @@ export default function Hero() {
   const typedText = useTypingAnimation(roles, 100, 50, 2000);
 
   return (
-    <section id="home" className="min-h-screen scroll-mt-24 pt-44 sm:pt-40 md:pt-36 pb-20 px-4 sm:px-6">
+    <section id="home" className="min-h-screen scroll-mt-24 pt-20 sm:pt-20 md:pt-16 pb-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {}
         <div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             <span className="block">Hi, I&apos;m</span>
             <span className="block break-words">ALIF MAS SASTRO NUGROHO,</span>
             <span className="inline-block min-w-[300px]">
@@ -63,15 +63,12 @@ export default function Hero() {
                 </span>
               </div>
               {}
-              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center text-6xl font-bold text-white">
-                    A
-                  </div>
-                  <p className="mt-4 text-sm text-muted font-mono tracking-wider">
-                    ● ● ● ● ● ● ● ● ● ● ● ●
-                  </p>
-                </div>
+              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/alif.jpg"
+                  alt="Alif Mas Sastro Nugroho"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
             </div>
             {}
