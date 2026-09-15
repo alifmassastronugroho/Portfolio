@@ -19,8 +19,12 @@ export default function About() {
             <div className="w-1 h-16 bg-primary mx-auto"></div>
             <div className="w-4 h-4 bg-white border-2 border-primary rounded mx-auto -mt-1"></div>
             <div className="hanging-card bg-white rounded-2xl p-4 shadow-xl border border-border mt-2">
-              <div className="w-64 h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
-                <div className="text-8xl font-bold text-gray-700">A</div>
+              <div className="w-64 h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
+                <img
+                  src="/alif.jpg"
+                  alt="Alif Mas Sastro Nugroho"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
             </div>
           </div>
