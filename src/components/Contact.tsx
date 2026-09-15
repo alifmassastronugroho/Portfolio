@@ -1,7 +1,7 @@
 "use client";
 
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Phone, Mail, Send } from "lucide-react";
+import { Camera, Music, Gamepad2, Mail, Send } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
@@ -43,12 +43,21 @@ export default function Contact() {
           </div>
 
           <div className="flex gap-3 mb-4">
-            <button className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all">
-              <Phone size={18} />
-            </button>
-            <button className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all">
-              <Mail size={18} />
-            </button>
+            {[
+              { icon: Camera, href: "https://github.com/alifmassastronugroho" },
+              { icon: Music, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
+              { icon: Gamepad2, href: "https://www.instagram.com/alifmassastronugroho/" },
+            ].map(({ icon: Icon, href }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
           </div>
 
           <p className="text-sm text-muted flex items-center gap-2">

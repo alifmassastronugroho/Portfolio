@@ -38,13 +38,20 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-3">
-            {[Camera, Music, Gamepad2].map((Icon, i) => (
-              <button
-                key={i}
+            {[
+              { icon: Camera, href: "https://github.com/alifmassastronugroho" },
+              { icon: Music, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
+              { icon: Gamepad2, href: "https://www.instagram.com/alifmassastronugroho/" },
+            ].map(({ icon: Icon, href }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all"
               >
                 <Icon size={18} />
-              </button>
+              </a>
             ))}
           </div>
         </div>
