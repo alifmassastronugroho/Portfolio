@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ALIF MAS SASTRO NUGROHO | Full Stack Development Portfolio",
+  title: "Mpy | Portfolio",
   description: "Portfolio of Alif Mas Sastro Nugroho - Full Stack Developer specializing in modern web experiences",
+  icons: {
+    icon: "/Favicon.png",
+  },
 };
 
 export default function RootLayout({
