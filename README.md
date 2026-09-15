@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio | Alif Mas Sastro Nugroho
 
-## Getting Started
+Situs portofolio pribadi satu halaman yang dibangun dengan Next.js App Router. Berisi profil, keahlian teknis, proyek, pengalaman, dan formulir kontak dalam satu alur scroll dengan navigasi yang mengikuti posisi pembaca.
 
-First, run the development server:
+## Teknologi
+
+| Bagian | Yang dipakai |
+| --- | --- |
+| Framework | Next.js 16.3.5 (App Router) |
+| UI | React 19.2.8 |
+| Bahasa | TypeScript 5 |
+| Styling | Tailwind CSS 4 lewat `@tailwindcss/postcss` |
+| Ikon | lucide-react |
+| Linting | ESLint 9 + eslint-config-next |
+| Font | Inter dan JetBrains Mono dari Google Fonts |
+
+## Fitur
+
+- Preloader saat halaman pertama dimuat
+- Navigasi sticky dengan penanda section aktif dan smooth scroll
+- Animasi mengetik untuk pergantian role di bagian Hero
+- Scroll reveal dan animasi bertahap pada kartu
+- Grid 23 skill dengan bar progres per kategori
+- Carousel pada bagian Journey
+- Formulir kontak dengan state React
+- Tema warna terpusat lewat blok `@theme` di `globals.css`
+
+## Struktur folder
+
+```
+portfolio/
+├── public/
+│   ├── alif.jpg
+│   └── *.svg
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── Preloader.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Process.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Journey.tsx
+│   │   ├── SoftSkills.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   └── hooks/
+│       ├── useActiveSection.ts
+│       ├── useJourneyCarousel.ts
+│       ├── useScrollReveal.ts
+│       └── useTypingAnimation.ts
+├── eslint.config.mjs
+├── next.config.ts
+├── postcss.config.mjs
+└── tsconfig.json
+```
+
+Semua section dirangkai di `src/app/page.tsx`. Setiap section adalah satu komponen mandiri.
+
+## Menjalankan di lokal
+
+Prasyarat: Node.js 20.9 atau lebih baru. Next.js 16 tidak lagi mendukung Node.js 18.
+
+1. Clone repo
+
+```bash
+git clone https://github.com/alifmassastronugroho/portfolio.git
+cd portfolio
+```
+
+2. Install dependensi
+
+```bash
+npm install
+```
+
+3. Jalankan server pengembangan
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Buka http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Script
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Perintah | Fungsi |
+| --- | --- |
+| `npm run dev` | Server pengembangan dengan Turbopack |
+| `npm run build` | Build produksi |
+| `npm run start` | Menjalankan hasil build |
+| `npm run lint` | Menjalankan ESLint |
 
-## Learn More
+Turbopack aktif secara default di Next.js 16, jadi flag `--turbopack` tidak diperlukan lagi.
 
-To learn more about Next.js, take a look at the following resources:
+## Kustomisasi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Identitas dan metadata SEO: `src/app/layout.tsx`
+- Teks pembuka dan daftar role yang berganti: `src/components/Hero.tsx`
+- Daftar skill beserta kategori dan nilai progres: array `skills` di `src/components/Skills.tsx`
+- Daftar proyek: array `projects` di `src/components/Projects.tsx`
+- Foto profil: ganti `public/alif.jpg`
+- Warna, font, dan animasi: blok `@theme` di `src/app/globals.css`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Palet saat ini memakai `--color-primary` hitam, `--color-accent` cokelat bata, dan `--color-bg` abu terang.
 
-## Deploy on Vercel
+## Yang masih perlu dikerjakan
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Formulir kontak baru mencetak data ke console dan menampilkan alert. Belum terhubung ke layanan email atau API route.
+- Tombol View My Work, Contact Me, View Resume, View Project, dan Live Demo belum punya tujuan link.
+- Tombol ikon sosial di Hero dan Contact belum punya aksi.
+- Foto profil memakai tag `img` biasa. Pindah ke `next/image` untuk optimasi ukuran.
+- Belum ada versi mobile untuk menu navigasi. Daftar link disembunyikan di bawah breakpoint `md`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Cara paling singkat adalah lewat Vercel. Import repo ini, biarkan pengaturan default Next.js, lalu deploy. Build command `next build`, output ditangani otomatis.
+
+## Kontak
+
+aminecodes1@gmail.com
