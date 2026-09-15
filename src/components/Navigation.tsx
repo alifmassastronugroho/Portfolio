@@ -28,18 +28,18 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/85 backdrop-blur-md shadow-sm" : "bg-bg/90 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
         <button
           onClick={() => scrollTo("home")}
-          className="text-xl font-bold tracking-tight"
+          className="text-sm sm:text-base lg:text-xl font-bold tracking-tight whitespace-nowrap"
         >
           ALIF MAS SASTRO NUGROHO<span className="text-accent">.</span>
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-8">
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -57,7 +57,7 @@ export default function Navigation() {
 
         <button
           onClick={() => scrollTo("contact")}
-          className="px-6 py-2 border-2 border-primary rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-all"
+          className="shrink-0 px-3 sm:px-4 lg:px-6 py-2 border-2 border-primary rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-all"
         >
           Hire Me
         </button>
