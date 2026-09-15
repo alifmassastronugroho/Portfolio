@@ -8,7 +8,7 @@ export default function Hero() {
   const typedText = useTypingAnimation(roles, 100, 50, 2000);
 
   return (
-    <section id="home" className="min-h-screen pt-32 pb-20 px-6">
+    <section id="home" className="min-h-screen scroll-mt-24 pt-44 sm:pt-40 md:pt-36 pb-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {}
         <div>
