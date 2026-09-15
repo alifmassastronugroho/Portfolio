@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
 import { ArrowRight, FileText, Camera, Music, Gamepad2 } from "lucide-react";
 
@@ -64,9 +65,12 @@ export default function Hero() {
               </div>
               {}
               <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
-                <img
+                <Image
                   src="/alif.jpg"
                   alt="Alif Mas Sastro Nugroho"
+                  width={720}
+                  height={708}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
