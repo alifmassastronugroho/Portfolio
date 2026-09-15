@@ -13,7 +13,7 @@ export default function Hero() {
         {}
         <div>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-            Hi, I&apos;m AMINE,
+            Hi, I&apos;m ALIF MAS SASTRO NUGROHO,
             <br />
             <span className="inline-block min-w-[300px]">
               {typedText}
@@ -56,7 +56,7 @@ export default function Hero() {
               {}
               <div className="absolute top-3 left-4 right-4 flex justify-between items-center z-10">
                 <span className="text-[10px] tracking-[2px] font-mono text-muted">
-                  <span className="text-accent">●</span> AMINE
+                  <span className="text-accent">●</span> ALIF MAS SASTRO NUGROHO
                 </span>
                 <span className="text-[10px] tracking-[2px] font-mono text-muted">
                   <span className="text-yellow-500">●</span> ON

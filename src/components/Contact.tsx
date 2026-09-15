@@ -38,7 +38,7 @@ export default function Contact() {
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px w-12 bg-border"></div>
             <span className="text-xs tracking-[3px] text-muted font-mono">
-              AMINE / AVAILABLE FOR NEW PROJECTS
+              ALIF MAS SASTRO NUGROHO / AVAILABLE FOR NEW PROJECTS
             </span>
           </div>
 
@@ -74,7 +74,7 @@ export default function Contact() {
                   type="text"
                   value={form.firstName}
                   onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                  placeholder="Amine"
+                  placeholder="Alif Mas Sastro Nugroho"
                   className="w-full bg-transparent border-b-2 border-border py-2 focus:border-accent outline-none transition-colors"
                   required
                 />

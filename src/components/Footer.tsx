@@ -11,8 +11,8 @@ export default function Footer() {
     <footer className="py-16 px-6 grid-bg">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8 text-xs tracking-[3px] text-muted font-mono">
-          <span>AMINE / PORTFOLIO</span>
-          <span>© 2026 AMINE</span>
+          <span>ALIF MAS SASTRO NUGROHO / PORTFOLIO</span>
+          <span>© 2026 ALIF MAS SASTRO NUGROHO</span>
         </div>
 
         <div className="h-px bg-border mb-8"></div>
@@ -23,7 +23,7 @@ export default function Footer() {
               A
             </div>
             <div>
-              <p className="font-bold">AMINE</p>
+              <p className="font-bold">ALIF MAS SASTRO NUGROHO</p>
               <p className="text-xs text-muted tracking-wider">FULL STACK DEVELOPER</p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-between items-center mt-12 pt-6 border-t border-border">
-          <p className="text-xs text-muted tracking-wider">© 2026 AMINE. ALL RIGHTS RESERVED.</p>
+          <p className="text-xs text-muted tracking-wider">© 2026 ALIF MAS SASTRO NUGROHO. ALL RIGHTS RESERVED.</p>
           <button
             onClick={scrollToTop}
             className="flex items-center gap-2 text-xs tracking-wider text-muted hover:text-primary transition-colors"
