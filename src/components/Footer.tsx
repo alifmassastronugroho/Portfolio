@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -30,8 +30,6 @@ export default function Footer() {
 
           <div className="flex gap-3">
             {[
-              { icon: Github, label: "GITHUB" },
-              { icon: Linkedin, label: "LINKEDIN" },
               { icon: Mail, label: "EMAIL" },
             ].map(({ icon: Icon, label }) => (
               <button
