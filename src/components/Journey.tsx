@@ -103,7 +103,7 @@ export default function Journey() {
                 >
                   <div className="flex justify-between items-start mb-8">
                     <div>
-                      <p className="text-6xl font-extrabold text-primary/10">
+                      <p className="text-6xl font-extrabold text-primary/25">
                         {chapter.num} <span className="text-2xl">/ 07</span>
                       </p>
                       <p className="text-xs tracking-[3px] text-muted mt-2">CHAPTER {chapter.num}</p>
