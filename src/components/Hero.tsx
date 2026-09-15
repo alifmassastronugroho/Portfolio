@@ -1,7 +1,7 @@
 "use client";
 
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
-import { ArrowRight, FileText, Instagram, Music, Gamepad2 } from "lucide-react";
+import { ArrowRight, FileText, Camera, Music, Gamepad2 } from "lucide-react";
 
 export default function Hero() {
   const roles = ["Frontend Developer", "Full Stack Developer", "Backend Developer"];
@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-3">
-            {[Instagram, Music, Gamepad2].map((Icon, i) => (
+            {[Camera, Music, Gamepad2].map((Icon, i) => (
               <button
                 key={i}
                 className="w-10 h-10 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all"
