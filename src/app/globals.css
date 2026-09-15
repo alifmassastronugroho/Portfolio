@@ -3,11 +3,11 @@
 
 @theme {
   --color-primary: #0a0a0a;
-  --color-accent: #c45a1a;
+  --color-accent: #9a3412;
   --color-bg: #f5f5f3;
   --color-card: #ffffff;
-  --color-muted: #6b6b6b;
-  --color-border: #e5e5e5;
+  --color-muted: #4b5563;
+  --color-border: #cbd5e1;
   
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -34,6 +34,11 @@ body {
   background-color: var(--color-bg);
   color: var(--color-primary);
   overflow-x: hidden;
+}
+
+::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
 }
 
 .grid-bg {

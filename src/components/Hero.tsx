@@ -63,9 +63,9 @@ export default function Hero() {
                 </span>
               </div>
               {}
-              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-6xl font-bold text-white">
+                  <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center text-6xl font-bold text-white">
                     A
                   </div>
                   <p className="mt-4 text-sm text-muted font-mono tracking-wider">

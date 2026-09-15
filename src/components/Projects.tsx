@@ -10,7 +10,7 @@ const projects = [
     title: "StockDZ",
     desc: "StockDZ is a modern web platform focused on presenting and exploring stock-related information through a clean and intuitive interface. The project was designed to provide users with a simple and accessible way to explore market data and interact with financial information.",
     tech: ["REACT", "JAVASCRIPT", "CSS3"],
-    color: "from-blue-100 to-blue-200",
+    color: "from-blue-700 to-blue-900",
   },
   {
     num: "02",
@@ -26,7 +26,7 @@ const projects = [
     title: "Portfolio",
     desc: "A modern personal portfolio website designed to showcase projects, technical skills, experience, and professional information through a clean and responsive interface.",
     tech: ["REACT.JS", "VITE", "JAVASCRIPT", "CSS3", "FONT AWESOME / BOXICONS", "SCROLL ANIMATIONS"],
-    color: "from-gray-200 to-gray-300",
+    color: "from-gray-600 to-gray-800",
   },
 ];
 
@@ -54,10 +54,10 @@ export default function Projects() {
             >
               {}
               <div className={`relative h-48 bg-gradient-to-br ${project.color} overflow-hidden`}>
-                <span className="absolute top-4 right-4 text-5xl font-extrabold text-white/30">
+                <span className="absolute top-4 right-4 text-5xl font-extrabold text-white/60">
                   {project.num}
                 </span>
-                <span className="absolute top-4 left-4 text-[10px] tracking-[2px] text-white/70 font-mono bg-black/20 px-2 py-1 rounded">
+                <span className="absolute top-4 left-4 text-[10px] tracking-[2px] text-white font-mono bg-black/30 px-2 py-1 rounded">
                   {project.category}
                 </span>
               </div>
