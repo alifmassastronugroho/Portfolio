@@ -7,13 +7,28 @@ import { useState } from "react";
 export default function Contact() {
   const ref = useScrollReveal<HTMLElement>();
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
-    // TODO: Integrate with email service
-    alert("Message sent! (Demo)");
-    setForm({ firstName: "", lastName: "", email: "", message: "" });
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact request failed");
+      }
+
+      setStatus("success");
+      setForm({ firstName: "", lastName: "", email: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -74,6 +89,17 @@ export default function Contact() {
 
           <h3 className="text-3xl font-bold mb-2">Tell me about your idea.</h3>
           <p className="text-sm text-muted mb-8">Isi detail di bawah ini dan saya akan menghubungi Anda kembali.</p>
+
+          {status !== "idle" && (
+            <p
+              aria-live="polite"
+              className={`mb-6 text-sm ${status === "success" ? "text-green-700" : status === "error" ? "text-red-700" : "text-muted"}`}
+            >
+              {status === "sending" && "Sending your message..."}
+              {status === "success" && "Pesan berhasil terkirim. Terima kasih sudah menghubungi saya."}
+              {status === "error" && "Pesan belum terkirim. Silakan coba lagi."}
+            </p>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
@@ -136,9 +162,10 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
+                disabled={status === "sending"}
                 className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors"
               >
-                SEND MESSAGE <Send size={14} />
+                {status === "sending" ? "SENDING..." : "SEND MESSAGE"} <Send size={14} />
               </button>
             </div>
           </form>
