@@ -10,9 +10,9 @@ export default function Footer() {
   return (
     <footer className="py-16 px-6 grid-bg">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8 text-xs tracking-[3px] text-muted font-mono">
-          <span>ALIF MAS SASTRO NUGROHO / PORTFOLIO</span>
-          <span>© 2026 ALIF MAS SASTRO NUGROHO</span>
+        <div className="mb-8 flex flex-col gap-2 text-[9px] tracking-[2px] text-muted font-mono sm:flex-row sm:items-center sm:justify-between sm:text-xs sm:tracking-[3px]">
+          <span className="break-words">ALIF MAS SASTRO NUGROHO / PORTFOLIO</span>
+          <span className="break-words">© 2026 ALIF MAS SASTRO NUGROHO</span>
         </div>
 
         <div className="h-px bg-border mb-8"></div>
@@ -32,12 +32,13 @@ export default function Footer() {
             {[
               { icon: Mail, label: "EMAIL" },
             ].map(({ icon: Icon, label }) => (
-              <button
+              <a
                 key={label}
-                className="px-4 py-2 border border-border rounded-full text-xs tracking-wider hover:border-accent hover:text-accent transition-colors"
+                href="mailto:alifmassastronugroho@gmail.com"
+                className="soft-pill px-4 py-2 rounded-full text-xs tracking-wider"
               >
                 {label}
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -46,9 +47,13 @@ export default function Footer() {
           <p className="text-xs text-muted tracking-wider">© 2026 ALIF MAS SASTRO NUGROHO. ALL RIGHTS RESERVED.</p>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-xs tracking-wider text-muted hover:text-primary transition-colors"
+            className="group flex items-center gap-2 text-xs tracking-wider text-muted transition-colors hover:text-primary"
           >
-            Back to top <ArrowUp size={12} />
+            <span className="text-sm font-medium sm:text-[0.8125rem]">Back to top</span>
+            <ArrowUp
+              size={20}
+              className="animate-[floatUp_1.2s_ease-in-out_infinite] transition-all duration-300 group-hover:scale-130 group-hover:text-primary"
+            />
           </button>
         </div>
       </div>

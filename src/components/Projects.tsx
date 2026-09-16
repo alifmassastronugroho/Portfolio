@@ -1,38 +1,31 @@
 "use client";
 
+import Image from "next/image";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
     num: "01",
-    category: "MARKET INTERFACE",
-    title: "StockDZ",
-    repoUrl: "https://github.com/alifmassastronugroho?tab=repositories",
-    liveUrl: "https://github.com/alifmassastronugroho?tab=repositories",
-    desc: "StockDZ is a modern web platform focused on presenting and exploring stock-related information through a clean and intuitive interface. The project was designed to provide users with a simple and accessible way to explore market data and interact with financial information.",
-    tech: ["REACT", "JAVASCRIPT", "CSS3"],
-    color: "from-blue-700 to-blue-900",
+    category: "WEB DEVELOPMENT",
+    title: "Kalivergo",
+    repoUrl: "https://kalivergo.vercel.app/",
+    liveUrl: "https://kalivergo.vercel.app/",
+    desc: "Kalivergo adalah platform manajemen kelas kampus yang dikembangkan bersama tim development. Platform ini mengintegrasikan tracking tugas, manajemen keuangan, seminar, dan kegiatan kelas dalam satu tempat yang aman dan transparan.",
+    tech: ["NEXT.JS", "REACT", "TYPESCRIPT"],
+    color: "from-sky-500 to-blue-700",
+    image: "/kalivergo-logo.jpg",
   },
   {
     num: "02",
-    category: "INTERACTIVE GAME",
-    title: "Hangman",
-    repoUrl: "https://github.com/alifmassastronugroho?tab=repositories",
-    liveUrl: "https://github.com/alifmassastronugroho?tab=repositories",
-    desc: "Hangman is an interactive word-guessing game where players try to discover the hidden word before running out of attempts. The project focuses on simple gameplay, responsive interaction, and a clean user experience.",
-    tech: ["JAVASCRIPT", "HTML", "CSS3"],
-    color: "from-gray-800 to-gray-900",
-  },
-  {
-    num: "03",
     category: "PERSONAL PLATFORM",
-    title: "Portfolio",
-    repoUrl: "https://github.com/alifmassastronugroho/portfolio",
-    liveUrl: "http://localhost:3000",
-    desc: "A modern personal portfolio website designed to showcase projects, technical skills, experience, and professional information through a clean and responsive interface.",
-    tech: ["REACT.JS", "VITE", "JAVASCRIPT", "CSS3", "FONT AWESOME / BOXICONS", "SCROLL ANIMATIONS"],
+    title: "Moneralepy",
+    repoUrl: "https://moneralepy.vercel.app/",
+    liveUrl: "https://moneralepy.vercel.app/",
+    desc: "Moneralepy adalah portfolio digital yang dibuat sendiri melalui proses fullstack development. Proyek ini menggabungkan antarmuka modern, backend, REST API, dan deployment untuk menampilkan karya, keahlian, serta pengalaman secara terstruktur.",
+    tech: ["REACT", "MERN STACK", "REST API", "DEPLOYMENT"],
     color: "from-gray-600 to-gray-800",
+    image: "/moneralepy-logo.png",
   },
 ];
 
@@ -43,16 +36,16 @@ export default function Projects() {
     <section id="projects" ref={ref} className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
+          <span className="soft-pill inline-block px-4 py-1.5 rounded-full text-xs tracking-wider mb-4">
             Featured Projects
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">Karya yang berbicara dengan sendirinya</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-4xl leading-tight font-extrabold mb-4">Karya yang berbicara dengan sendirinya</h2>
           <p className="text-muted max-w-2xl">
             Pilihan karya yang berfokus pada antarmuka yang jelas, interaksi yang penuh pertimbangan, dan pengalaman digital yang praktis.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {projects.map((project, i) => (
             <div
               key={i}
@@ -60,6 +53,15 @@ export default function Projects() {
             >
               {}
               <div className={`relative h-48 bg-gradient-to-br ${project.color} overflow-hidden`}>
+                {project.image && (
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} logo`}
+                    width={32}
+                    height={32}
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                  />
+                )}
                 <span className="absolute top-4 right-4 text-5xl font-extrabold text-white/60">
                   {project.num}
                 </span>
@@ -77,7 +79,7 @@ export default function Projects() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 bg-white rounded-full text-[10px] tracking-wider text-muted border border-border"
+                      className="soft-pill px-3 py-1 rounded-full text-[10px] tracking-wider"
                     >
                       {t}
                     </span>
@@ -97,7 +99,7 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-2.5 border-2 border-border rounded-full text-sm font-semibold flex items-center gap-2 hover:border-primary transition-colors"
+                    className="soft-pill px-4 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2"
                   >
                     Live Demo <ExternalLink size={14} />
                   </a>

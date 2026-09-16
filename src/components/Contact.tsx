@@ -42,18 +42,19 @@ export default function Contact() {
             <span className="text-xs tracking-[3px] text-accent font-semibold">LET&apos;S CONNECT</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight mb-6">
             Mari membangun sesuatu yang bermakna.
           </h2>
           <div className="w-20 h-1 bg-accent mb-6"></div>
 
-          <p className="text-muted text-lg mb-12">
-            Punya ide, proyek, atau sekadar ingin terhubung? Jangan ragu untuk menghubungi saya.
+          <p className="text-muted text-base sm:text-lg leading-7 sm:leading-8 mb-12 max-w-xl text-pretty">
+            Punya ide, proyek, atau sekadar ingin terhubung? <br className="hidden sm:block" />
+            Jangan ragu untuk menghubungi saya.
           </p>
 
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-px w-12 bg-border"></div>
-            <span className="text-xs tracking-[3px] text-muted font-mono">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8">
+            <div className="h-px w-12 bg-border shrink-0"></div>
+            <span className="text-[10px] sm:text-xs tracking-[0.18em] text-muted font-mono uppercase leading-relaxed break-words">
               ALIF MAS SASTRO NUGROHO / AVAILABLE FOR NEW PROJECTS
             </span>
           </div>
@@ -133,7 +134,7 @@ export default function Contact() {
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="alifmassastronugroho@email.com"
+                placeholder="Your email address"
                 className="w-full bg-transparent border-b-2 border-border py-2 focus:border-accent outline-none transition-colors"
                 required
               />

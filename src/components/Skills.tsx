@@ -47,10 +47,10 @@ export default function Skills() {
     <section id="skills" ref={ref} className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
+          <span className="soft-pill inline-block px-4 py-1.5 rounded-full text-xs tracking-wider mb-4">
             Technical Stack
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">MY SKILLS</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-4xl leading-tight font-extrabold mb-4">MY SKILLS</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Gambaran menyeluruh tentang bahasa pemrograman, framework, basis data, dan konsep rekayasa yang saya kuasai.
           </p>

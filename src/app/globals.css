@@ -12,9 +12,9 @@
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
-  --animate-fade-in: fadeIn 0.8s ease forwards;
-  --animate-fade-in-up: fadeInUp 0.8s ease forwards;
-  --animate-blur-in: blurIn 1.5s ease forwards;
+  --animate-fade-in: fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-fade-in-up: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-blur-in: blurIn 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   --animate-swing: swing 4s ease-in-out infinite;
   --animate-blink: blink 1s infinite;
 }
@@ -29,6 +29,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: clamp(4.5rem, 8vw, 5rem);
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -36,6 +38,78 @@ body {
   background-color: var(--color-bg);
   color: var(--color-primary);
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
+main.bg-bg {
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(120deg, rgba(154, 52, 18, 0.025), transparent 38%),
+    linear-gradient(300deg, rgba(10, 10, 10, 0.018), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(10, 10, 10, 0.01) 0 1px, transparent 1px 10px);
+  background-attachment: fixed;
+}
+
+main > section {
+  position: relative;
+  isolation: isolate;
+  view-timeline-name: --section-view;
+  view-timeline-axis: block;
+  animation: sectionReveal linear both;
+  animation-timeline: --section-view;
+  animation-range: entry 0% cover 28%;
+}
+
+main > section:nth-of-type(3n + 2) {
+  background-color: rgba(255, 255, 255, 0.18);
+  background-image:
+    radial-gradient(rgba(154, 52, 18, 0.055) 0.7px, transparent 0.7px),
+    linear-gradient(100deg, rgba(255, 255, 255, 0.2), transparent 42%, rgba(154, 52, 18, 0.02));
+  background-size: 22px 22px, 100% 100%;
+}
+
+main > section:nth-of-type(3n + 3) {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 24%, rgba(154, 52, 18, 0.018));
+}
+
+main > section + section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(12rem, 34vw);
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0.55;
+  transform: translateX(-50%);
+}
+
+main > section:nth-of-type(odd)::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  right: clamp(1rem, 5vw, 5rem);
+  width: 7px;
+  height: 7px;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
+  transform: rotate(45deg);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: markerFloat 6s ease-in-out infinite;
+}
+
+main > section:nth-of-type(even)::after {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: clamp(1rem, 5vw, 5rem);
+  width: 2.75rem;
+  height: 1px;
+  background: color-mix(in srgb, var(--color-accent) 70%, transparent);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: markerPulse 5s ease-in-out infinite;
 }
 
 ::placeholder {
@@ -66,9 +140,9 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .reveal.visible {
   opacity: 1;
@@ -77,8 +151,9 @@ body {
 
 .stagger-item {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(14px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .stagger-item.visible {
   opacity: 1;
@@ -97,17 +172,18 @@ body {
 
 .nav-link {
   position: relative;
-  padding-bottom: 4px;
+  padding: 8px 2px 10px;
 }
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 50%;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: var(--color-accent);
-  transition: all 0.3s ease;
+  border-radius: 999px;
+  transition: width 0.3s ease;
   transform: translateX(-50%);
 }
 .nav-link:hover::after,
@@ -119,23 +195,38 @@ body {
   transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.soft-pill {
+  background-color: color-mix(in srgb, var(--color-accent) 6%, white);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 22%, var(--color-border));
+  color: color-mix(in srgb, var(--color-primary) 76%, var(--color-accent));
+  box-shadow: 0 2px 8px rgba(154, 52, 18, 0.04);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.soft-pill:hover {
+  background-color: color-mix(in srgb, var(--color-accent) 10%, white);
+  border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-border));
+  color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(154, 52, 18, 0.08);
+}
+
 .hanging-card {
   transform-origin: top center;
   animation: swing 4s ease-in-out infinite;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
+  0% { opacity: 0; transform: translateY(6px); }
   100% { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
+  0% { opacity: 0; transform: translateY(12px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes blurIn {
-  0% { filter: blur(20px); opacity: 0; transform: scale(0.95); }
+  0% { filter: blur(12px); opacity: 0; transform: translateY(8px) scale(0.985); }
   100% { filter: blur(0px); opacity: 1; transform: scale(1); }
 }
 
@@ -144,7 +235,60 @@ body {
   50% { transform: rotate(3deg); }
 }
 
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
+  50% { transform: translateY(-7px) scale(1.22); opacity: 1; }
+}
+
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0.86;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes markerFloat {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(-8px) rotate(45deg); }
+}
+
+@keyframes markerPulse {
+  0%, 100% { opacity: 0.28; transform: scaleX(0.8); transform-origin: left; }
+  50% { opacity: 0.55; transform: scaleX(1); transform-origin: left; }
+}
+
+@media (max-width: 768px) {
+  main > section {
+    animation-range: entry 0% cover 22%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  main > section {
+    animation: none;
+  }
+
+  main > section::after {
+    animation: none;
+  }
+
+  .reveal,
+  .stagger-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

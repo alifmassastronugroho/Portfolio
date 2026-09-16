@@ -41,10 +41,10 @@ export default function Process() {
     <section ref={ref} className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
+          <span className="soft-pill inline-block px-4 py-1.5 rounded-full text-xs tracking-wider mb-4">
             MY PROCESS
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">Bagaimana Saya Membangun Pengalaman Digital</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-4xl leading-tight font-extrabold mb-4">Bagaimana Saya Membangun Pengalaman Digital</h2>
           <p className="text-muted max-w-2xl">
             Dari ide sederhana hingga pengalaman digital yang matang, saya memadukan pengembangan, desain, dan pemikiran kreatif di setiap tahap.
           </p>
@@ -62,7 +62,9 @@ export default function Process() {
                   {}
                   <div className="hidden lg:flex absolute -top-10 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-bg z-10"></div>
 
-                  <div className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg transition-all">
+                  <div className={`bg-white rounded-2xl p-6 border border-border hover:shadow-lg transition-all ${
+                    i === 2 ? "lg:h-[26rem]" : i === 3 ? "lg:h-[28rem]" : ""
+                  }`}>
                     <div className="flex justify-between items-start mb-4">
                       <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
                         <Icon size={24} className="text-accent" />
@@ -77,7 +79,7 @@ export default function Process() {
                       {stage.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-bg rounded-full text-[10px] tracking-wider text-muted"
+                          className="soft-pill px-3 py-1 rounded-full text-[10px] tracking-wider"
                         >
                           {tag}
                         </span>

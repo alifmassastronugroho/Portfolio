@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowDown, ArrowRight, FileText } from "lucide-react";
 import { SocialIcon } from "./SocialIcons";
 
 export default function Hero() {
@@ -10,11 +10,11 @@ export default function Hero() {
   const typedText = useTypingAnimation(roles, 100, 50, 2000);
 
   return (
-    <section id="home" className="min-h-screen scroll-mt-24 pt-20 sm:pt-20 md:pt-16 pb-20 px-4 sm:px-6">
+    <section id="home" className="relative min-h-screen scroll-mt-24 px-4 pb-20 pt-20 sm:px-6 sm:pt-20 md:pt-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {}
         <div>
-          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
             <span className="block">Hi, I&apos;m</span>
             <span className="block break-words">ALIF MAS SASTRO NUGROHO,</span>
             <span className="inline-block min-w-[300px]">
@@ -23,21 +23,21 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg text-muted mb-8 max-w-md">
+          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted mb-8 max-w-lg">
             Saya membangun pengalaman digital yang matang dengan sudut pandang yang bersih dan modern.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
-            <a href="#projects" className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors">
+            <a href="#projects" className="px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-base bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors">
               View My Work <ArrowRight size={16} />
             </a>
-            <a href="#contact" className="px-8 py-3 border-2 border-border rounded-full font-semibold hover:border-primary transition-colors">
+            <a href="#contact" className="soft-pill px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-base rounded-full font-semibold">
               Contact Me
             </a>
             <a
               href="/resume.pdf"
               download
-              className="px-8 py-3 border-2 border-border rounded-full font-semibold flex items-center gap-2 hover:border-primary transition-colors"
+              className="soft-pill px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-base rounded-full font-semibold flex items-center gap-2"
             >
               <FileText size={16} /> View Resume
             </a>
@@ -97,10 +97,10 @@ export default function Hero() {
       </div>
 
       {}
-      <div className="flex justify-center mt-12 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-primary rounded-full"></div>
-        </div>
+      <div className="absolute inset-x-0 bottom-6 flex justify-center animate-bounce sm:bottom-8">
+        <a href="#about" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/25 text-primary shadow-sm">
+          <ArrowDown size={20} strokeWidth={1.75} aria-hidden="true" />
+        </a>
       </div>
     </section>
   );
