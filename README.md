@@ -39,7 +39,7 @@ Website ini memanfaatkan ekosistem modern React melalui **Next.js (App Router)**
 -  **Optimasi Aset**: Pemuatan gambar dan aset statis yang efisien (menggunakan komponen `next/image` dan folder `public` yang terstruktur).
 -  **Arsitektur Komponen**: Pemisahan logika yang rapi antara `app/`, `components/`, dan `hooks/` untuk skalabilitas jangka panjang.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Kategori       | Teknologi                                                                 |
 |----------------|---------------------------------------------------------------------------|
