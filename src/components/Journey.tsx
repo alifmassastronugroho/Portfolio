@@ -7,9 +7,9 @@ const chapters = [
   {
     num: "01",
     category: "EDUCATION",
-    title: "Computer Science",
-    desc: "Saya sedang mempelajari Ilmu Komputer di USTHB dan membangun dasar yang kuat dalam pemrograman, pemecahan masalah, algoritma, struktur data, basis data, serta pengembangan perangkat lunak.",
-    tags: ["USTHB"],
+    title: "Teknik Informatika",
+    desc: "Saya sedang menempuh studi Teknik Informatika di Universitas Pamulang, dengan fokus pada fondasi pemrograman, algoritma, struktur data, basis data, serta pengembangan perangkat lunak dan pemecahan masalah dalam dunia teknologi informasi.",
+    tags: ["UNIVERSITAS PAMULANG"],
     icon: Circle,
     cta: "EXPLORE PROJECTS",
   },
@@ -49,9 +49,9 @@ const chapters = [
   {
     num: "06",
     category: "EXPLORATION",
-    title: "3D & Visualization",
-    desc: "Saya mengeksplorasi pemodelan 3D, rendering, dan visualisasi sebagai bagian lain dari sisi kreatif saya dengan memadukan pemikiran teknis dan eksperimen visual.",
-    tags: ["3D Modeling", "Rendering", "Visualization"],
+    title: "Editor",
+    desc: "Saya mengeksplorasi dunia editing untuk menyusun video, visual, dan audio menjadi cerita yang menarik dengan memperhatikan ritme, detail, serta alur yang kuat.",
+    tags: ["Video Editing", "Visual Editing", "Storytelling"],
     icon: Square,
   },
   {
@@ -85,7 +85,7 @@ export default function Journey() {
 
         <div className="grid md:grid-cols-[1fr_auto] gap-5 sm:gap-8 items-start">
           {}
-          <div className="relative h-[460px] sm:h-[540px] md:h-[500px]">
+          <div className="relative h-[520px] sm:h-[540px] md:h-[500px]">
             {chapters.map((chapter, i) => {
               const Icon = chapter.icon;
               const offset = i - activeIndex;
@@ -113,7 +113,7 @@ export default function Journey() {
                     </div>
                   </div>
 
-                  <h3 className="text-4xl sm:text-5xl md:text-4xl font-extrabold mb-4 sm:mb-6 leading-tight">{chapter.title}</h3>
+                  <h3 className="text-3xl sm:text-5xl md:text-4xl font-extrabold mb-4 sm:mb-6 leading-tight">{chapter.title}</h3>
                   <p className="text-base text-muted leading-relaxed mb-6 sm:mb-8 max-w-xl">{chapter.desc}</p>
 
                   <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
