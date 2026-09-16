@@ -23,7 +23,7 @@ The contact form sends messages through Resend. Add these variables to `.env.loc
 ```bash
 RESEND_API_KEY=re_xxxxxxxxx
 RESEND_FROM_EMAIL=Portfolio <onboarding@resend.dev>
-CONTACT_EMAIL=your-inbox@example.com
+CONTACT_EMAIL=alifmassastronugroho.com
 ```
 
 Use a verified domain address for `RESEND_FROM_EMAIL` in production. Keep `RESEND_API_KEY` server-side and never expose it with a `NEXT_PUBLIC_` prefix.
