@@ -17,7 +17,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
             <span className="block">Hi, I&apos;m</span>
             <span className="block break-words">ALIF MAS SASTRO NUGROHO,</span>
-            <span className="inline-block min-w-[300px]">
+            <span className="block h-[2.4em] w-[11ch] min-w-0 max-w-[11ch] md:h-[1.2em] md:w-auto md:min-w-[300px] md:max-w-none">
               {typedText}
               <span className="typing-cursor"></span>
             </span>
