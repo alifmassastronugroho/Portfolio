@@ -70,22 +70,22 @@ export default function Journey() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 px-6 bg-white min-h-screen"
+      className="px-4 sm:px-6 bg-white min-h-[350vh] sm:min-h-[450vh] md:min-h-[500vh]"
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+      <div className="max-w-6xl mx-auto sticky top-[56%] -translate-y-1/2 py-16 sm:py-20 md:py-24">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
             MY JOURNEY
           </span>
-          <h2 className="text-5xl font-extrabold mb-4">Beyond Code</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">Beyond Code</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Sekilas tentang hal-hal yang saya bangun, eksplorasi, dan terus pelajari di luar kode itu sendiri.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+        <div className="grid md:grid-cols-[1fr_auto] gap-5 sm:gap-8 items-start">
           {}
-          <div className="relative h-[500px]">
+          <div className="relative h-[460px] sm:h-[540px] md:h-[500px]">
             {chapters.map((chapter, i) => {
               const Icon = chapter.icon;
               const offset = i - activeIndex;
@@ -94,29 +94,29 @@ export default function Journey() {
               return (
                 <div
                   key={i}
-                  className="absolute inset-0 bg-white rounded-3xl p-10 border border-border shadow-lg transition-all duration-500"
+                  className="absolute inset-0 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 border border-border shadow-lg transition-all duration-500"
                   style={{
                     transform: `translateY(${offset * 20}px) scale(${1 - Math.abs(offset) * 0.03})`,
                     zIndex: chapters.length - Math.abs(offset),
                     opacity: isActive ? 1 : 0.5,
                   }}
                 >
-                  <div className="flex justify-between items-start mb-8">
+                  <div className="flex justify-between items-start mb-5 sm:mb-8">
                     <div>
-                      <p className="text-6xl font-extrabold text-primary/25">
-                        {chapter.num} <span className="text-2xl">/ 07</span>
+                      <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary/25">
+                        {chapter.num} <span className="text-xl sm:text-2xl">/ 07</span>
                       </p>
-                      <p className="text-xs tracking-[3px] text-muted mt-2">CHAPTER {chapter.num}</p>
+                      <p className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] text-muted mt-2">CHAPTER {chapter.num}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs tracking-[3px] text-accent font-semibold">{chapter.category}</p>
+                      <p className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] text-accent font-semibold">{chapter.category}</p>
                     </div>
                   </div>
 
-                  <h3 className="text-5xl font-extrabold mb-6 leading-tight">{chapter.title}</h3>
-                  <p className="text-muted leading-relaxed mb-8 max-w-xl">{chapter.desc}</p>
+                  <h3 className="text-4xl sm:text-5xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight">{chapter.title}</h3>
+                  <p className="text-base text-muted leading-relaxed mb-6 sm:mb-8 max-w-xl">{chapter.desc}</p>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex flex-wrap gap-2">
                       {chapter.tags.map((tag) => (
                         <span
@@ -135,8 +135,9 @@ export default function Journey() {
                   </div>
 
                   {}
-                  <div className="absolute top-10 right-10 opacity-10">
-                    <Icon size={80} strokeWidth={1} />
+                  <div className="absolute top-6 right-6 sm:top-10 sm:right-10 opacity-10">
+                    <Icon size={64} strokeWidth={1} className="sm:hidden" />
+                    <Icon size={80} strokeWidth={1} className="hidden sm:block" />
                   </div>
                 </div>
               );
@@ -144,7 +145,7 @@ export default function Journey() {
           </div>
 
           {}
-          <div className="sticky top-32 text-right">
+          <div className="sticky top-32 pt-4 md:pt-0 text-center md:text-right">
             <p className="text-3xl font-extrabold">
               {String(activeIndex + 1).padStart(2, "0")}{" "}
               <span className="text-muted">/ 07</span>

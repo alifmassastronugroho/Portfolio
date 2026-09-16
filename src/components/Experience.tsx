@@ -36,7 +36,7 @@ export default function Experience() {
     <section ref={ref} className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-extrabold mb-4">WORK EXPERIENCE</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">WORK EXPERIENCE</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Pengalaman langsung melalui proyek pribadi, pengembangan freelance, magang, dan latihan kreatif yang berkelanjutan.
           </p>

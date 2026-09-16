@@ -42,7 +42,7 @@ export default function Contact() {
             <span className="text-xs tracking-[3px] text-accent font-semibold">LET&apos;S CONNECT</span>
           </div>
 
-          <h2 className="text-6xl md:text-7xl font-extrabold leading-tight mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6">
             Mari membangun sesuatu yang bermakna.
           </h2>
           <div className="w-20 h-1 bg-accent mb-6"></div>

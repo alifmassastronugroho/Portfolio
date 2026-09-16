@@ -46,7 +46,7 @@ export default function Projects() {
           <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
             Featured Projects
           </span>
-          <h2 className="text-5xl font-extrabold mb-4">Karya yang berbicara dengan sendirinya</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">Karya yang berbicara dengan sendirinya</h2>
           <p className="text-muted max-w-2xl">
             Pilihan karya yang berfokus pada antarmuka yang jelas, interaksi yang penuh pertimbangan, dan pengalaman digital yang praktis.
           </p>

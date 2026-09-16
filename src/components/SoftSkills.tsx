@@ -59,7 +59,7 @@ export default function SoftSkills() {
           <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
             Core Competencies
           </span>
-          <h2 className="text-5xl font-extrabold mb-4">PROFESSIONAL SOFT SKILLS</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">PROFESSIONAL SOFT SKILLS</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Essential traits that make me an effective engineer, coordinator, and communicator.
           </p>
