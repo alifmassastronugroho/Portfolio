@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/alifmassastronugroho/portfolio/main/public/Favicon.png" alt="Logo M Portfolio" width="100" />
-  <h1 align="center">PERSONAL PLATFORMl</h1>
+  <h1 align="center">PERSONAL PLATFORM</h1>
   <p align="center">
     <strong>Alif Mas Sastro Nugroho</strong>
     <br />
