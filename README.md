@@ -1,48 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio | Alif Mas Sastro Nugroho
 
-## Getting Started
+Situs portofolio pribadi satu halaman yang dibangun dengan Next.js App Router. Berisi profil, keahlian teknis, proyek, pengalaman, dan formulir kontak dalam satu alur scroll dengan navigasi yang mengikuti posisi pembaca.
 
-First, run the development server:
+## Teknologi
+
+| Bagian | Yang dipakai |
+| --- | --- |
+| Framework | Next.js 16.3.5 (App Router) |
+| UI | React 19.2.8 |
+| Bahasa | TypeScript 5 |
+| Styling | Tailwind CSS 4 lewat `@tailwindcss/postcss` |
+| Ikon | lucide-react |
+| Linting | ESLint 9 + eslint-config-next |
+| Font | Inter dan JetBrains Mono dari Google Fonts |
+
+## Fitur
+
+- Preloader saat halaman pertama dimuat
+- Navigasi sticky dengan penanda section aktif dan smooth scroll
+- Animasi mengetik untuk pergantian role di bagian Hero
+- Scroll reveal dan animasi bertahap pada kartu
+- Grid 23 skill dengan bar progres per kategori
+- Carousel pada bagian Journey
+- Formulir kontak dengan state React
+- Tema warna terpusat lewat blok `@theme` di `globals.css`
+
+## Struktur folder
+
+```
+portfolio/
+├── public/
+│   ├── alif.jpg
+│   └── *.svg
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── Preloader.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Process.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Journey.tsx
+│   │   ├── SoftSkills.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   └── hooks/
+│       ├── useActiveSection.ts
+│       ├── useJourneyCarousel.ts
+│       ├── useScrollReveal.ts
+│       └── useTypingAnimation.ts
+├── eslint.config.mjs
+├── next.config.ts
+├── postcss.config.mjs
+└── tsconfig.json
+```
+
+Semua section dirangkai di `src/app/page.tsx`. Setiap section adalah satu komponen mandiri.
+
+## Menjalankan di lokal
+
+Prasyarat: Node.js 20.9 atau lebih baru. Next.js 16 tidak lagi mendukung Node.js 18.
+
+1. Clone repo
+
+```bash
+git clone https://github.com/alifmassastronugroho/portfolio.git
+cd portfolio
+```
+
+2. Install dependensi
+
+```bash
+npm install
+```
+
+3. Jalankan server pengembangan
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Buka http://localhost:3000
 
-## Contact email configuration
+## Script
 
-The contact form sends messages through Resend. Add these variables to `.env.local` before running the app:
+| Perintah | Fungsi |
+| --- | --- |
+| `npm run dev` | Server pengembangan dengan Turbopack |
+| `npm run build` | Build produksi |
+| `npm run start` | Menjalankan hasil build |
+| `npm run lint` | Menjalankan ESLint |
 
-```bash
-RESEND_API_KEY=re_xxxxxxxxx
-RESEND_FROM_EMAIL=Portfolio <onboarding@resend.dev>
-CONTACT_EMAIL=alifmassastronugroho.com
-```
+Turbopack aktif secara default di Next.js 16, jadi flag `--turbopack` tidak diperlukan lagi.
 
-Use a verified domain address for `RESEND_FROM_EMAIL` in production. Keep `RESEND_API_KEY` server-side and never expose it with a `NEXT_PUBLIC_` prefix.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Cara paling singkat adalah lewat Vercel. Import repo ini, biarkan pengaturan default Next.js, lalu deploy. Build command `next build`, output ditangani otomatis.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Kontak
 
-## Learn More
+alifmassastronugroho@gmail.com
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
