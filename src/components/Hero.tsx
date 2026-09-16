@@ -26,15 +26,19 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
-            <button className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors">
+            <a href="#projects" className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors">
               View My Work <ArrowRight size={16} />
-            </button>
-            <button className="px-8 py-3 border-2 border-border rounded-full font-semibold hover:border-primary transition-colors">
+            </a>
+            <a href="#contact" className="px-8 py-3 border-2 border-border rounded-full font-semibold hover:border-primary transition-colors">
               Contact Me
-            </button>
-            <button className="px-8 py-3 border-2 border-border rounded-full font-semibold flex items-center gap-2 hover:border-primary transition-colors">
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="px-8 py-3 border-2 border-border rounded-full font-semibold flex items-center gap-2 hover:border-primary transition-colors"
+            >
               <FileText size={16} /> View Resume
-            </button>
+            </a>
           </div>
 
           <div className="flex gap-3">
