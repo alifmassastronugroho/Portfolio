@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navLinks = [
@@ -13,6 +14,7 @@ const navLinks = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeSection = useActiveSection(navLinks.map((l) => l.id));
 
   useEffect(() => {
@@ -23,6 +25,7 @@ export default function Navigation() {
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -39,7 +42,7 @@ export default function Navigation() {
           ALIF MAS SASTRO NUGROHO<span className="text-accent">.</span>
         </button>
 
-        <div className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-8">
+        <div className="hidden md:flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-3 lg:gap-5 xl:gap-8">
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -56,12 +59,45 @@ export default function Navigation() {
         </div>
 
         <button
-          onClick={() => scrollTo("contact")}
-          className="shrink-0 px-3 sm:px-4 lg:px-6 py-2 border-2 border-primary rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-all"
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
+          className="md:hidden p-2 text-primary"
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
-          Hire Me
+          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+
+        <button
+          onClick={() => scrollTo("contact")}
+          className="hidden md:block shrink-0 px-3 lg:px-4 py-1.5 border-2 border-primary rounded-full text-xs lg:text-sm font-semibold hover:bg-primary hover:text-white transition-all"
+        >
+          Contact Me
         </button>
       </div>
+
+      {isMobileMenuOpen && (
+        <div
+          id="mobile-navigation"
+          className="md:hidden border-t border-border bg-white/95 px-4 py-3 shadow-sm backdrop-blur-md"
+        >
+          <div className="flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollTo(link.id)}
+                className={`w-full px-3 py-3 text-left text-sm font-medium transition-colors ${
+                  activeSection === link.id
+                    ? "bg-primary text-white"
+                    : "text-muted hover:bg-bg hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
