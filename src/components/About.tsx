@@ -35,21 +35,21 @@ export default function About() {
         </div>
 
         {}
-        <div>
+        <div className="max-w-xl">
           <h2 className="text-5xl font-extrabold mb-6">Hello!</h2>
-          <p className="text-lg mb-4">
+          <p className="text-lg mb-5">
             <span className="text-accent font-semibold">
-              Hai, Nama saya ALIF MAS SASTRO NUGROHO. Saya peduli dalam membangun produk digital yang jelas, bermanfaat, dan matang.
+              Hai, saya Alif Mas Sastro Nugroho. Saya peduli pada proses membangun produk digital yang jelas, bermanfaat, dan matang.
             </span>
           </p>
-          <p className="text-muted leading-relaxed mb-4">
-            Saya tertarik pada titik temu antara desain yang penuh pertimbangan dan rekayasa praktis. Saya senang mengubah gagasan awal menjadi pengalaman yang jelas, bermanfaat, tenang, dan terarah.
+          <p className="text-muted leading-relaxed mb-5">
+            Saya tertarik pada desain yang penuh pertimbangan dan rekayasa praktis. Bagi saya, gagasan yang baik perlu diolah menjadi pengalaman yang jelas, tenang, dan terarah.
           </p>
-          <p className="text-muted leading-relaxed mb-4">
-            Pendekatan saya bersifat langsung: memahami masalah, menyusun struktur, membangun dengan cermat, dan terus menyempurnakan detail yang membuat produk lebih mudah digunakan. Saya menghargai pekerjaan yang mudah dipahami, kolaborasi yang kuat, serta antarmuka yang berkomunikasi tanpa kerumitan yang tidak perlu.
+          <p className="text-muted leading-relaxed mb-5">
+            Pendekatan saya sederhana: memahami masalah, menyusun struktur, membangun dengan cermat, lalu menyempurnakan detail yang membuat produk lebih mudah digunakan. Saya menghargai pekerjaan yang mudah dipahami dan kolaborasi yang kuat.
           </p>
           <p className="text-muted leading-relaxed">
-            Di luar kode itu sendiri, saya menikmati sisi visual dari pekerjaan digital: ritme, komposisi, gerakan, dan interaksi kecil yang memberikan karakter pada sebuah proyek.
+            Di luar kode, saya menikmati sisi visual dari pekerjaan digital: ritme, komposisi, gerakan, dan interaksi kecil yang memberi karakter pada sebuah proyek.
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Preloader() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isExited, setIsExited] = useState(false);
   const [dots, setDots] = useState("");
 
   useEffect(() => {
@@ -13,6 +14,9 @@ export default function Preloader() {
 
     const timer = setTimeout(() => {
       setIsLoaded(true);
+      setTimeout(() => {
+        setIsExited(true);
+      }, 700);
     }, 3000);
 
     return () => {
@@ -21,15 +25,15 @@ export default function Preloader() {
     };
   }, []);
 
-  if (isLoaded) return null;
+  if (isExited) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-bg grid-bg flex items-center justify-center">
+    <div className={`fixed inset-0 z-[9999] bg-bg grid-bg flex items-center justify-center transition-transform duration-700 ease-in-out ${isLoaded ? "-translate-y-full" : "translate-y-0"}`}>
       {}
-      <div className="absolute top-4 left-4 sm:top-8 sm:left-8 max-w-[42vw] text-[8px] leading-tight tracking-[1px] sm:text-xs sm:tracking-[3px] text-muted font-mono">
+      <div className="absolute left-4 top-4 max-w-[42vw] text-[8px] leading-tight tracking-[1px] text-muted font-mono sm:left-8 sm:top-8 sm:text-xs sm:tracking-[3px]">
         PORTFOLIO / 2026
       </div>
-      <div className="absolute top-4 right-4 sm:top-8 sm:right-8 max-w-[48vw] text-right text-[8px] leading-tight tracking-[1px] sm:text-xs sm:tracking-[3px] text-muted font-mono">
+      <div className="absolute right-4 top-4 max-w-[48vw] text-right text-[8px] leading-tight tracking-[1px] text-muted font-mono break-words sm:right-8 sm:top-8 sm:max-w-[40vw] sm:text-xs sm:tracking-[3px]">
         ALIF MAS SASTRO NUGROHO_CODES
       </div>
       <div className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 -rotate-90 text-[8px] leading-tight tracking-[2px] sm:text-xs sm:tracking-[3px] text-muted font-mono origin-left">
@@ -49,14 +53,14 @@ export default function Preloader() {
           <div className="h-px w-8 sm:w-12 bg-accent"></div>
         </div>
 
-        <h1 className="max-w-[calc(100vw-2rem)] px-2 text-[clamp(3rem,14vw,7.5rem)] leading-[0.92] font-extrabold text-primary tracking-tight break-words animate-blur-in sm:max-w-[90vw]">
+        <h1 className="max-w-[calc(100vw-2rem)] px-2 text-[clamp(1.75rem,8vw,5.5rem)] leading-[0.95] font-extrabold text-primary tracking-tight break-words animate-blur-in sm:max-w-[90vw]">
           ALIF MAS SASTRO NUGROHO<span className="text-accent">.</span>
         </h1>
 
         <div className="flex items-center gap-2 justify-center mt-4 px-4 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
           <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
           <span className="text-[10px] sm:text-xs tracking-[2px] sm:tracking-[4px] text-muted font-mono">
-            FULL STACK DEVELOPER
+            PORTFOLIO
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
         </div>

@@ -8,7 +8,7 @@ const chapters = [
     num: "01",
     category: "EDUCATION",
     title: "Computer Science",
-    desc: "I'm studying Computer Science at USTHB, building a strong foundation in programming, problem solving, algorithms, data structures, databases, and software development.",
+    desc: "Saya sedang mempelajari Ilmu Komputer di USTHB dan membangun dasar yang kuat dalam pemrograman, pemecahan masalah, algoritma, struktur data, basis data, serta pengembangan perangkat lunak.",
     tags: ["USTHB"],
     icon: Circle,
     cta: "EXPLORE PROJECTS",
@@ -17,7 +17,7 @@ const chapters = [
     num: "02",
     category: "BUILDING WORK",
     title: "Personal Projects",
-    desc: "I learn by building. My personal projects give me a space to experiment with ideas, improve my development skills, and turn concepts into real digital experiences.",
+    desc: "Saya belajar dengan membangun sesuatu. Proyek pribadi memberi saya ruang untuk bereksperimen dengan berbagai ide, meningkatkan kemampuan pengembangan, dan mengubah konsep menjadi pengalaman digital nyata.",
     tags: ["BUILD", "LEARN", "IMPROVE"],
     icon: Square,
     cta: "EXPLORE PROJECTS",
@@ -26,7 +26,7 @@ const chapters = [
     num: "03",
     category: "PROFESSIONAL",
     title: "Freelance Developer",
-    desc: "Working on real development tasks has helped me improve how I approach problems, implement features, fix issues, and turn requirements into working solutions.",
+    desc: "Mengerjakan tugas pengembangan nyata membantu saya meningkatkan cara menghadapi masalah, menerapkan fitur, memperbaiki kendala, dan mengubah kebutuhan menjadi solusi yang berfungsi.",
     tags: ["WEB DEVELOPMENT", "CLIENT WORK", "PROBLEM SOLVING"],
     icon: Triangle,
   },
@@ -34,7 +34,7 @@ const chapters = [
     num: "04",
     category: "CREATIVE",
     title: "UI/UX & Visual Design",
-    desc: "I enjoy exploring UI/UX, visual composition, and interface design. I like turning ideas into clean, intuitive experiences where design and functionality work together.",
+    desc: "Saya senang mengeksplorasi UI/UX, komposisi visual, dan desain antarmuka. Saya suka mengubah ide menjadi pengalaman yang bersih dan intuitif, dengan desain serta fungsi yang saling mendukung.",
     tags: ["Figma", "UI/UX", "Visual Design", "After Effects", "Photoshop", "Motion"],
     icon: Hexagon,
   },
@@ -42,7 +42,7 @@ const chapters = [
     num: "05",
     category: "MOTION",
     title: "Creative Editing & Motion",
-    desc: "I also explore creative editing, motion, transitions, and visual storytelling. It gives me another way to experiment with timing, composition, and interaction.",
+    desc: "Saya juga mengeksplorasi penyuntingan kreatif, motion, transisi, dan penceritaan visual. Hal ini memberi saya cara lain untuk bereksperimen dengan waktu, komposisi, dan interaksi.",
     tags: ["After Effects", "Photoshop", "Motion", "Visual Editing"],
     icon: Circle,
   },
@@ -50,7 +50,7 @@ const chapters = [
     num: "06",
     category: "EXPLORATION",
     title: "3D & Visualization",
-    desc: "I explore 3D modeling, rendering, and visualization as another part of my creative side — combining technical thinking with visual experimentation.",
+    desc: "Saya mengeksplorasi pemodelan 3D, rendering, dan visualisasi sebagai bagian lain dari sisi kreatif saya dengan memadukan pemikiran teknis dan eksperimen visual.",
     tags: ["3D Modeling", "Rendering", "Visualization"],
     icon: Square,
   },
@@ -58,7 +58,7 @@ const chapters = [
     num: "07",
     category: "GROWTH",
     title: "Always Learning",
-    desc: "I continuously explore new technologies, development techniques, design ideas, and creative tools. Learning, experimenting, and building are a constant part of my journey.",
+    desc: "Saya terus mengeksplorasi teknologi baru, teknik pengembangan, ide desain, dan alat kreatif. Belajar, bereksperimen, dan membangun sesuatu merupakan bagian yang selalu ada dalam perjalanan saya.",
     tags: ["LEARN", "EXPERIMENT", "BUILD"],
     icon: Triangle,
   },
@@ -72,12 +72,12 @@ export default function Journey() {
       ref={sectionRef}
       className="px-4 sm:px-6 bg-white min-h-[350vh] sm:min-h-[450vh] md:min-h-[500vh]"
     >
-      <div className="max-w-6xl mx-auto sticky top-[56%] -translate-y-1/2 py-16 sm:py-20 md:py-24">
-        <div className="text-center mb-10 sm:mb-16">
-          <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
+      <div className="max-w-6xl mx-auto sticky top-[-4rem] py-16 sm:py-20 md:top-[-5rem] md:py-8">
+        <div className="text-center mb-10 sm:mb-16 md:mb-8">
+          <span className="soft-pill inline-block px-4 py-1.5 rounded-full text-xs tracking-wider mb-4">
             MY JOURNEY
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">Beyond Code</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-4xl leading-tight font-extrabold mb-4">Beyond Code</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Sekilas tentang hal-hal yang saya bangun, eksplorasi, dan terus pelajari di luar kode itu sendiri.
           </p>
@@ -113,7 +113,7 @@ export default function Journey() {
                     </div>
                   </div>
 
-                  <h3 className="text-4xl sm:text-5xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight">{chapter.title}</h3>
+                  <h3 className="text-4xl sm:text-5xl md:text-4xl font-extrabold mb-4 sm:mb-6 leading-tight">{chapter.title}</h3>
                   <p className="text-base text-muted leading-relaxed mb-6 sm:mb-8 max-w-xl">{chapter.desc}</p>
 
                   <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -121,7 +121,7 @@ export default function Journey() {
                       {chapter.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-bg rounded-full text-[10px] tracking-wider text-muted border border-border"
+                          className="soft-pill px-3 py-1 rounded-full text-[10px] tracking-wider"
                         >
                           {tag}
                         </span>

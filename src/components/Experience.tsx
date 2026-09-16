@@ -36,7 +36,7 @@ export default function Experience() {
     <section ref={ref} className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold mb-4">WORK EXPERIENCE</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-4xl leading-tight font-extrabold mb-4">WORK EXPERIENCE</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Pengalaman langsung melalui proyek pribadi, pengembangan freelance, magang, dan latihan kreatif yang berkelanjutan.
           </p>
@@ -50,7 +50,7 @@ export default function Experience() {
             >
               <div className="flex justify-between items-start mb-6">
                 <span className="text-xs font-mono text-muted tracking-wider">{exp.period}</span>
-                <span className="px-3 py-1 bg-bg rounded-full text-[10px] tracking-wider font-semibold">
+                <span className="soft-pill px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold">
                   {exp.type}
                 </span>
               </div>
@@ -76,7 +76,7 @@ export default function Experience() {
                   {exp.tech.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 bg-bg rounded-full text-[10px] tracking-wider text-muted"
+                      className="soft-pill px-3 py-1 rounded-full text-[10px] tracking-wider"
                     >
                       {t}
                     </span>
