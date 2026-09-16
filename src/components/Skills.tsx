@@ -4,7 +4,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import {
   Code2, Braces, Terminal, Globe, FileCode, Palette,
   Server, Zap, Database, GitBranch, Wrench, Settings,
-  Cpu, BookOpen, Layers, Rocket
+  Cpu, BookOpen, Layers, Rocket, Film, Image, Camera
 } from "lucide-react";
 
 interface Skill {
@@ -15,27 +15,20 @@ interface Skill {
 }
 
 const skills: Skill[] = [
+  { name: "GIT & GITHUB", category: "TOOLS & AUTOMATION", icon: GitBranch, progress: 88 },
+  { name: "VS CODE", category: "TOOLS & AUTOMATION", icon: Wrench, progress: 95 },
   { name: "JAVA", category: "PROGRAMMING LANGUAGES", icon: Code2, progress: 85 },
   { name: "C++", category: "PROGRAMMING LANGUAGES", icon: Braces, progress: 75 },
+  { name: "VIDEO EDITOR", category: "CREATIVE TOOLS", icon: Film, progress: 88 },
+  { name: "FOTOGRAFI", category: "CREATIVE TOOLS", icon: Camera, progress: 82 },
   { name: "PYTHON", category: "PROGRAMMING LANGUAGES", icon: Terminal, progress: 80 },
-  { name: "MERN STACK", category: "FULL STACK", icon: Globe, progress: 90 },
   { name: "HTML", category: "FULL STACK", icon: FileCode, progress: 95 },
   { name: "CSS", category: "FULL STACK", icon: Palette, progress: 90 },
   { name: "JAVASCRIPT", category: "FULL STACK", icon: Code2, progress: 92 },
-  { name: "SPRING BOOT", category: "BACKEND", icon: Server, progress: 78 },
   { name: "FASTAPI", category: "BACKEND", icon: Zap, progress: 75 },
   { name: "REST APIS", category: "BACKEND", icon: Globe, progress: 85 },
-  { name: "MONGODB", category: "DATABASES", icon: Database, progress: 82 },
   { name: "MYSQL", category: "DATABASES", icon: Database, progress: 80 },
-  { name: "FIREBASE", category: "DATABASES", icon: Database, progress: 70 },
-  { name: "GIT & GITHUB", category: "TOOLS & AUTOMATION", icon: GitBranch, progress: 88 },
-  { name: "VS CODE", category: "TOOLS & AUTOMATION", icon: Wrench, progress: 95 },
-  { name: "POSTMAN", category: "TOOLS & AUTOMATION", icon: Settings, progress: 85 },
-  { name: "N8N", category: "TOOLS & AUTOMATION", icon: Settings, progress: 65 },
-  { name: "MONGODB COMPASS", category: "TOOLS & AUTOMATION", icon: Database, progress: 75 },
   { name: "ALGORITHMS", category: "COMPUTER SCIENCE CONCEPTS", icon: Cpu, progress: 80 },
-  { name: "DBMS", category: "COMPUTER SCIENCE CONCEPTS", icon: Database, progress: 78 },
-  { name: "OOP", category: "COMPUTER SCIENCE CONCEPTS", icon: Layers, progress: 85 },
   { name: "SOFTWARE ENGINEERING", category: "COMPUTER SCIENCE CONCEPTS", icon: BookOpen, progress: 82 },
   { name: "DEPLOYMENT", category: "WORKFLOW", icon: Rocket, progress: 75 },
 ];

@@ -62,7 +62,7 @@ export default function Contact() {
           <div className="flex gap-3 mb-4">
             {[
               { icon: "github" as const, href: "https://github.com/alifmassastronugroho" },
-              { icon: "linkedin" as const, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
+              { icon: "linkedin" as const, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho-0886b2425/" },
               { icon: "instagram" as const, href: "https://www.instagram.com/amsn_serve/" },
             ].map(({ icon: Icon, href }) => (
               <a
@@ -158,14 +158,14 @@ export default function Contact() {
             <div className="flex items-center justify-between pt-4 border-t border-border">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                <span className="text-[10px] tracking-[2px] text-muted font-semibold">
+                <span className="text-[11px] sm:text-xs tracking-[0.12em] text-muted font-semibold">
                   USUALLY REPLIES VIA EMAIL
                 </span>
               </div>
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors"
+                className="px-5 py-2.5 text-sm whitespace-nowrap bg-primary text-white rounded-full font-semibold flex items-center gap-1.5 hover:bg-accent transition-colors"
               >
                 {status === "sending" ? "SENDING..." : "SEND MESSAGE"} <Send size={14} />
               </button>
