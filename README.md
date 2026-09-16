@@ -50,19 +50,53 @@ Website ini memanfaatkan ekosistem modern React melalui **Next.js (App Router)**
 | **Deployment** | [Vercel](https://vercel.com/)                                             |
 | **Versioning** | [Git](https://git-scm.com/) & [GitHub](https://github.com/)               |
 
-##  Struktur Folder
+##  Struktur Folder Lengkap
+
+Proyek ini mengikuti arsitektur modular yang memisahkan dengan jelas antara konfigurasi, aset statis, logika komponen, dan *custom hooks*. Berikut adalah struktur direktori lengkap beserta file-file di dalamnya:
 
 ```text
 portfolio/
-├── public/                 # Aset statis (gambar, favicon, logo)
-│   ├── Favicon.png         # Logo utama (M)
-│   ├── alif.jpg            # Foto profil
-│   └── ...                 # Aset proyek lainnya (misal: moneralepy-logo.png)
+├── public/                           # Aset statis (dapat diakses langsung oleh browser)
+│   ├── Favicon.png                   # Logo utama website (M)
+│   ├── alif.jpg                      # Foto profil
+│   ├── kalivergo-logo.jpg            # Aset logo proyek (Kalivergo)
+│   ├── moneralepy-logo.png           # Aset logo proyek (Moneralepy)
+│   └── [file.svg, globe.svg, ...]    # Ikon dan gambar pendukung lainnya
+│
 ├── src/
-│   ├── app/                # Next.js App Router (pages, layouts, routing)
-│   ├── components/         # Komponen UI yang dapat digunakan kembali (reusable)
-│   └── hooks/              # Custom React hooks untuk logika bisnis yang terpisah
-├── .gitignore              # File dan folder yang diabaikan oleh Git
-├── next.config.ts          # Konfigurasi kustom Next.js
-├── package.json            # Dependensi dan skrip proyek
-└── README.md               # Dokumentasi ini
+│   ├── app/                          # Next.js App Router & Konfigurasi Global
+│   │   ├── api/
+│   │   │   └── contact/
+│   │   │       └── route.ts          # API Endpoint (Next.js Route) untuk form kontak
+│   │   ├── favicon.ico               # Favicon default Next.js
+│   │   ├── globals.css               # Styling global (CSS Reset, Tailwind directives)
+│   │   ├── layout.tsx                # Root Layout (Metadata, Font, Wrapper)
+│   │   └── page.tsx                  # Halaman utama (Home)
+│   │
+│   ├── components/                   # Komponen UI yang dapat digunakan kembali (Reusable)
+│   │   ├── Hero.tsx                  # Section pembuka (Header & Intro)
+│   │   ├── About.tsx                 # Section tentang saya
+│   │   ├── Skills.tsx & SoftSkills.tsx # Daftar hard skills dan soft skills
+│   │   ├── Experience.tsx            # Pengalaman kerja / profesional
+│   │   ├── Journey.tsx               # Riwayat perjalanan (carousel/timeline)
+│   │   ├── Process.tsx               # Proses kerja / alur kerja
+│   │   ├── Projects.tsx              # Daftar proyek yang telah dikerjakan
+│   │   ├── Contact.tsx               # Section dan formulir kontak
+│   │   ├── Navigation.tsx            # Navbar / Menu navigasi responsif
+│   │   ├── Footer.tsx                # Footer website
+│   │   ├── Preloader.tsx             # Animasi loading awal sebelum website muncul
+│   │   └── SocialIcons.tsx           # Komponen ikon media sosial
+│   │
+│   └── hooks/                        # Custom React Hooks (Memisahkan logic dari UI)
+│       ├── useActiveSection.ts       # Logika scroll-spy untuk navigasi aktif
+│       ├── useJourneyCarousel.ts     # Logika state untuk carousel Journey
+│       ├── useScrollReveal.ts        # Logika animasi reveal saat elemen di-scroll
+│       └── useTypingAnimation.ts     # Logika animasi mesin ketik (typewriter effect)
+│
+├── eslint.config.mjs                 # Konfigurasi ESLint (Linting standar kode)
+├── next.config.ts                    # Konfigurasi khusus Next.js
+├── package.json                      # Daftar dependensi dan skrip npm
+├── package-lock.json                 # Kunci versi dependensi (npm)
+├── postcss.config.mjs                # Konfigurasi PostCSS (untuk Tailwind/CSS)
+├── tsconfig.json                     # Konfigurasi TypeScript
+└── README.md                         # Dokumentasi proyek ini
