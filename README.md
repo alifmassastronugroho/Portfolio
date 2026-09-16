@@ -99,25 +99,6 @@ npm run dev
 
 Turbopack aktif secara default di Next.js 16, jadi flag `--turbopack` tidak diperlukan lagi.
 
-## Kustomisasi
-
-- Identitas dan metadata SEO: `src/app/layout.tsx`
-- Teks pembuka dan daftar role yang berganti: `src/components/Hero.tsx`
-- Daftar skill beserta kategori dan nilai progres: array `skills` di `src/components/Skills.tsx`
-- Daftar proyek: array `projects` di `src/components/Projects.tsx`
-- Foto profil: ganti `public/alif.jpg`
-- Warna, font, dan animasi: blok `@theme` di `src/app/globals.css`
-
-Palet saat ini memakai `--color-primary` hitam, `--color-accent` cokelat bata, dan `--color-bg` abu terang.
-
-## Yang masih perlu dikerjakan
-
-- Formulir kontak baru mencetak data ke console dan menampilkan alert. Belum terhubung ke layanan email atau API route.
-- Tombol View My Work, Contact Me, View Resume, View Project, dan Live Demo belum punya tujuan link.
-- Tombol ikon sosial di Hero dan Contact belum punya aksi.
-- Foto profil memakai tag `img` biasa. Pindah ke `next/image` untuk optimasi ukuran.
-- Belum ada versi mobile untuk menu navigasi. Daftar link disembunyikan di bawah breakpoint `md`.
-
 ## Deploy
 
 Cara paling singkat adalah lewat Vercel. Import repo ini, biarkan pengaturan default Next.js, lalu deploy. Build command `next build`, output ditangani otomatis.

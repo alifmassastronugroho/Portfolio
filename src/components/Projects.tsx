@@ -8,6 +8,8 @@ const projects = [
     num: "01",
     category: "MARKET INTERFACE",
     title: "StockDZ",
+    repoUrl: "https://github.com/alifmassastronugroho?tab=repositories",
+    liveUrl: "https://github.com/alifmassastronugroho?tab=repositories",
     desc: "StockDZ is a modern web platform focused on presenting and exploring stock-related information through a clean and intuitive interface. The project was designed to provide users with a simple and accessible way to explore market data and interact with financial information.",
     tech: ["REACT", "JAVASCRIPT", "CSS3"],
     color: "from-blue-700 to-blue-900",
@@ -16,6 +18,8 @@ const projects = [
     num: "02",
     category: "INTERACTIVE GAME",
     title: "Hangman",
+    repoUrl: "https://github.com/alifmassastronugroho?tab=repositories",
+    liveUrl: "https://github.com/alifmassastronugroho?tab=repositories",
     desc: "Hangman is an interactive word-guessing game where players try to discover the hidden word before running out of attempts. The project focuses on simple gameplay, responsive interaction, and a clean user experience.",
     tech: ["JAVASCRIPT", "HTML", "CSS3"],
     color: "from-gray-800 to-gray-900",
@@ -24,6 +28,8 @@ const projects = [
     num: "03",
     category: "PERSONAL PLATFORM",
     title: "Portfolio",
+    repoUrl: "https://github.com/alifmassastronugroho/portfolio",
+    liveUrl: "http://localhost:3000",
     desc: "A modern personal portfolio website designed to showcase projects, technical skills, experience, and professional information through a clean and responsive interface.",
     tech: ["REACT.JS", "VITE", "JAVASCRIPT", "CSS3", "FONT AWESOME / BOXICONS", "SCROLL ANIMATIONS"],
     color: "from-gray-600 to-gray-800",
@@ -79,12 +85,22 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="flex-1 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-accent transition-colors">
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-accent transition-colors text-center"
+                  >
                     View Project
-                  </button>
-                  <button className="px-4 py-2.5 border-2 border-border rounded-full text-sm font-semibold flex items-center gap-2 hover:border-primary transition-colors">
+                  </a>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-4 py-2.5 border-2 border-border rounded-full text-sm font-semibold flex items-center gap-2 hover:border-primary transition-colors"
+                  >
                     Live Demo <ExternalLink size={14} />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

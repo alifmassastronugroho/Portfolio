@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Sparkles } from "lucide-react";
 
@@ -20,9 +21,12 @@ export default function About() {
             <div className="w-4 h-4 bg-white border-2 border-primary rounded mx-auto -mt-1"></div>
             <div className="hanging-card bg-white rounded-2xl p-4 shadow-xl border border-border mt-2">
               <div className="w-64 h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
-                <img
+                <Image
                   src="/alif.jpg"
                   alt="Alif Mas Sastro Nugroho"
+                  width={720}
+                  height={708}
+                  sizes="256px"
                   className="w-full h-full object-cover object-center"
                 />
               </div>

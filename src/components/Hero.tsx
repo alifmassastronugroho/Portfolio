@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
 import { ArrowRight, FileText, Camera, Music, Gamepad2 } from "lucide-react";
 
@@ -26,25 +27,36 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
-            <button className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors">
+            <a href="#projects" className="px-8 py-3 bg-primary text-white rounded-full font-semibold flex items-center gap-2 hover:bg-accent transition-colors">
               View My Work <ArrowRight size={16} />
-            </button>
-            <button className="px-8 py-3 border-2 border-border rounded-full font-semibold hover:border-primary transition-colors">
+            </a>
+            <a href="#contact" className="px-8 py-3 border-2 border-border rounded-full font-semibold hover:border-primary transition-colors">
               Contact Me
-            </button>
-            <button className="px-8 py-3 border-2 border-border rounded-full font-semibold flex items-center gap-2 hover:border-primary transition-colors">
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="px-8 py-3 border-2 border-border rounded-full font-semibold flex items-center gap-2 hover:border-primary transition-colors"
+            >
               <FileText size={16} /> View Resume
-            </button>
+            </a>
           </div>
 
           <div className="flex gap-3">
-            {[Camera, Music, Gamepad2].map((Icon, i) => (
-              <button
-                key={i}
+            {[
+              { icon: Camera, href: "https://github.com/alifmassastronugroho" },
+              { icon: Music, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
+              { icon: Gamepad2, href: "https://www.instagram.com/alifmassastronugroho/" },
+            ].map(({ icon: Icon, href }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all"
               >
                 <Icon size={18} />
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -64,9 +76,12 @@ export default function Hero() {
               </div>
               {}
               <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
-                <img
+                <Image
                   src="/alif.jpg"
                   alt="Alif Mas Sastro Nugroho"
+                  width={720}
+                  height={708}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
