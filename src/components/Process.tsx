@@ -44,7 +44,7 @@ export default function Process() {
           <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
             MY PROCESS
           </span>
-          <h2 className="text-5xl font-extrabold mb-4">How I Build</h2>
+          <h2 className="text-5xl font-extrabold mb-4">Bagaimana Saya Membangun Pengalaman Digital</h2>
           <p className="text-muted max-w-2xl">
             Dari ide sederhana hingga pengalaman digital yang matang, saya memadukan pengembangan, desain, dan pemikiran kreatif di setiap tahap.
           </p>

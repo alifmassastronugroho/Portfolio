@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
-import { ArrowRight, FileText, Camera, Music, Gamepad2 } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
+import { SocialIcon } from "./SocialIcons";
 
 export default function Hero() {
   const roles = ["Frontend Developer", "Full Stack Developer", "Backend Developer"];
@@ -44,9 +45,9 @@ export default function Hero() {
 
           <div className="flex gap-3">
             {[
-              { icon: Camera, href: "https://github.com/alifmassastronugroho" },
-              { icon: Music, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
-              { icon: Gamepad2, href: "https://www.instagram.com/alifmassastronugroho/" },
+              { icon: "github" as const, href: "https://github.com/alifmassastronugroho" },
+              { icon: "linkedin" as const, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho-0886b2425/" },
+              { icon: "instagram" as const, href: "https://www.instagram.com/amsn_serve/" },
             ].map(({ icon: Icon, href }) => (
               <a
                 key={href}
@@ -55,7 +56,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all"
               >
-                <Icon size={18} />
+                <SocialIcon name={Icon} size={18} />
               </a>
             ))}
           </div>

@@ -1,7 +1,8 @@
 "use client";
 
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Camera, Music, Gamepad2, Mail, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
+import { SocialIcon } from "./SocialIcons";
 import { useState } from "react";
 
 export default function Contact() {
@@ -59,9 +60,9 @@ export default function Contact() {
 
           <div className="flex gap-3 mb-4">
             {[
-              { icon: Camera, href: "https://github.com/alifmassastronugroho" },
-              { icon: Music, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
-              { icon: Gamepad2, href: "https://www.instagram.com/alifmassastronugroho/" },
+              { icon: "github" as const, href: "https://github.com/alifmassastronugroho" },
+              { icon: "linkedin" as const, href: "https://www.linkedin.com/in/alif-mas-sastro-nugroho/" },
+              { icon: "instagram" as const, href: "https://www.instagram.com/amsn_serve/" },
             ].map(({ icon: Icon, href }) => (
               <a
                 key={href}
@@ -70,7 +71,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-border flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all"
               >
-                <Icon size={18} />
+                <SocialIcon name={Icon} size={18} />
               </a>
             ))}
           </div>
@@ -109,7 +110,7 @@ export default function Contact() {
                   type="text"
                   value={form.firstName}
                   onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                  placeholder="Alif Mas Sastro Nugroho"
+                  placeholder="Your first name"
                   className="w-full bg-transparent border-b-2 border-border py-2 focus:border-accent outline-none transition-colors"
                   required
                 />
@@ -132,7 +133,7 @@ export default function Contact() {
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="your@email.com"
+                placeholder="alifmassastronugroho@email.com"
                 className="w-full bg-transparent border-b-2 border-border py-2 focus:border-accent outline-none transition-colors"
                 required
               />

@@ -50,7 +50,7 @@ export default function Skills() {
           <span className="inline-block px-4 py-1.5 border border-border rounded-full text-xs tracking-wider text-muted mb-4">
             Technical Stack
           </span>
-          <h2 className="text-5xl font-extrabold mb-4">MY SKILLSET</h2>
+          <h2 className="text-5xl font-extrabold mb-4">MY SKILLS</h2>
           <p className="text-muted max-w-2xl mx-auto">
             Gambaran menyeluruh tentang bahasa pemrograman, framework, basis data, dan konsep rekayasa yang saya kuasai.
           </p>
