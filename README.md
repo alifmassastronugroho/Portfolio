@@ -24,20 +24,20 @@
 
 ---
 
-## 📌 Tentang Proyek
+##  Tentang Proyek
 
 Proyek ini adalah website portofolio personal yang dirancang untuk menampilkan profil, keahlian, pengalaman, dan proyek-proyek yang telah dikerjakan secara profesional. Dibangun dengan fokus pada **kinerja (performance)**, **aksesibilitas (accessibility)**, dan **pengalaman pengguna (UX)** yang mulus di berbagai perangkat.
 
 Website ini memanfaatkan ekosistem modern React melalui **Next.js (App Router)** dengan **TypeScript** untuk memastikan kode yang tipe-aman (*type-safe*), mudah dipelihara (*maintainable*), dan siap untuk produksi.
 
-## ✨ Fitur Utama
+##  Fitur Utama
 
-- 🚀 **Performa Tinggi**: Memanfaatkan Server-Side Rendering (SSR) dan Static Site Generation (SSG) dari Next.js untuk waktu muat yang sangat cepat.
-- 📱 **Responsif Penuh**: Tampilan UI yang beradaptasi dengan sempurna di desktop, tablet, dan perangkat mobile (termasuk navigasi mobile yang telah dioptimalkan).
-- 🎨 **Desain Modern & Bersih**: Tipografi yang dioptimalkan secara otomatis menggunakan `next/font` (Geist Font) untuk menghilangkan *layout shift* (CLS) dan meningkatkan estetika.
-- 🛡️ **Type-Safe**: Pengembangan menggunakan TypeScript (>93% dari kodebase) untuk mengurangi bug runtime dan meningkatkan kualitas kode.
-- ⚡ **Optimasi Aset**: Pemuatan gambar dan aset statis yang efisien (menggunakan komponen `next/image` dan folder `public` yang terstruktur).
-- 🔄 **Arsitektur Komponen**: Pemisahan logika yang rapi antara `app/`, `components/`, dan `hooks/` untuk skalabilitas jangka panjang.
+-  **Performa Tinggi**: Memanfaatkan Server-Side Rendering (SSR) dan Static Site Generation (SSG) dari Next.js untuk waktu muat yang sangat cepat.
+-  **Responsif Penuh**: Tampilan UI yang beradaptasi dengan sempurna di desktop, tablet, dan perangkat mobile (termasuk navigasi mobile yang telah dioptimalkan).
+-  **Desain Modern & Bersih**: Tipografi yang dioptimalkan secara otomatis menggunakan `next/font` (Geist Font) untuk menghilangkan *layout shift* (CLS) dan meningkatkan estetika.
+-  **Type-Safe**: Pengembangan menggunakan TypeScript (>93% dari kodebase) untuk mengurangi bug runtime dan meningkatkan kualitas kode.
+-  **Optimasi Aset**: Pemuatan gambar dan aset statis yang efisien (menggunakan komponen `next/image` dan folder `public` yang terstruktur).
+-  **Arsitektur Komponen**: Pemisahan logika yang rapi antara `app/`, `components/`, dan `hooks/` untuk skalabilitas jangka panjang.
 
 ## 🛠️ Tech Stack
 
@@ -50,7 +50,7 @@ Website ini memanfaatkan ekosistem modern React melalui **Next.js (App Router)**
 | **Deployment** | [Vercel](https://vercel.com/)                                             |
 | **Versioning** | [Git](https://git-scm.com/) & [GitHub](https://github.com/)               |
 
-## 📂 Struktur Folder
+##  Struktur Folder
 
 ```text
 portfolio/
